@@ -1,6 +1,6 @@
 from Parser.Parser import Parser
 from math import ceil, floor
-
+import os
 #x is the number of row jumps,
 #y is the number of column jumps
 def countTrees(input, x, y):
@@ -16,6 +16,11 @@ def countTrees(input, x, y):
                 trees += 1
         print(trees)
     return trees
+
+def make_dirs_numbered(start = "C:\\Users\\patfa\\PycharmProjects\\AdventOfCode\\Day", amount=0):
+    for i in range(1, amount+1):
+        name = start + str(amount)
+        os.mkdir(name)
 
 def multiply_runs(input_vals: list, x: list, y: list) -> int:
     trees = 1
